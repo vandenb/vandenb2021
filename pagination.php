@@ -32,9 +32,7 @@
                             <p class="is-size-7 has-text-centered">Hierna geplaatst: <?php next_post_link('%link'); ?></p>
                     <?php endif ?> 
                    
-                    <h5 class="bottomheader is-size-5 has-text-centered">Meer lezen?</h5>
-                <p>Er staat een <a href="/inhoudsopgave">inhoudsopgave</a> met alle stukjes voor u klaar.</p>
-
+                    
 
                 </div>
             </div>
