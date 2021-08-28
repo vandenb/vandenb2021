@@ -33,11 +33,14 @@
   <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
   <div class="highlighted">
-                    <hr>
+                    
                     <h4>Laatste update</h4>
-                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <h3 style="font-size:2.5rem !important;font-style:italic !important;"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <p class="overzichtdatum"><?php the_time('j F Y') ?></p>
+                        <br>
                         <p class="overzichtintro"><?php the_field('intro'); ?></p>
+                        <br>
+                        <p class="laatsteupdate"><i><?php the_field('_yoast_wpseo_metadesc'); ?></i><br><span style="font-size:1rem"><a href="<?php the_permalink(); ?>">Lees verder &raquo;</a></span></p>
                     <hr>
                     </div>
     
@@ -50,7 +53,7 @@
 <?php endif; ?>
 
 
-U kunt zich inschrijven voor <a href="https://tinyletter.com/vandenb/" target="_blank" rel="noopener">de nieuwsbrief</a>.
+<p>U kunt zich inschrijven voor <a href="https://tinyletter.com/vandenb/" target="_blank" rel="noopener">de nieuwsbrief</a>.</p>
 
 <!--h3>Over</h3-->
 <ul>
@@ -68,20 +71,23 @@ Ik heb vijf romans geschreven.
 </ul>
 
 <h3>Stukjes</h3>
-Alle stukjes, omgekeerd chronologisch. Stukjes die iets meer aandacht verdienen, hebben een grotere kop. 
+<p>Alle stukjes, omgekeerd chronologisch. <br>Stukjes die iets meer aandacht verdienen, hebben een grotere kop.</p>
 <br>
 <br> 
 
 
+
+
+
 <?php 
 // the query
-$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
- 
+$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>500,'offset' => 1)); ?>
+<!-- posts_perPage staat hier op 500 omdat offset niet werkt als je -1 gebruikt, zoals eigenlijk zou moeten -->
 <?php if ( $wpb_all_query->have_posts() ) : ?>
  
 
  
-    <!-- the loop -->
+    
     <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
 
             <?php if ( has_tag( 'highlight' ) ) : ?>
@@ -89,9 +95,10 @@ $wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish
                     <div class="highlighted">
                     <hr>
                         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <p class="overzichtdatum"><?php the_time('j F Y') ?></p>
                         <p class="overzichtintro"><?php the_field('intro'); ?></p>
-                    <hr>
+                        <p class="overzichtdatum"><?php the_time('j F Y') ?></p>
+                        
+                    
                     </div>
 
  
