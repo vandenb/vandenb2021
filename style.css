@@ -492,7 +492,7 @@ strong.wsp-category-title a {
     -webkit-column-count: 1 !important;
     -moz-column-count: 1 !important;
     column-count: 1 !important;
-    font-size: 1.1em;
+    font-size: 1.25em;
     line-height: 1.4em; }
   .masthead {
     text-align: center !important;
@@ -523,7 +523,7 @@ strong.wsp-category-title a {
     font-style: italic !important; }
   .articlebread > p {
     margin: 0 0 20px 0;
-    font-size: 1.1em;
+    font-size: 1.25em;
     line-height: 1.4em; }
   .inhoudsopgave > p {
     margin: 10px 0 0 0;
@@ -590,7 +590,7 @@ strong.wsp-category-title a {
   .articlebread > p {
     margin: 0 0 20px 0;
     font-size: 1.25em;
-    line-height: 1.7em; }
+    line-height: 1.4em; }
   .inhoudsopgave > p {
     margin: 10px 0 0 0;
     font-size: 1.25em;
