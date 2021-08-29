@@ -4,11 +4,11 @@
                 <div class="outrocolumn">
                     <p>Dit artikel is geplaatst op <?php the_time('j F Y') ?>, in de categorie 
                         <span class="is-lowercase">
-                                <a href="/inhoudsopgave#<?php $category = get_the_category(); echo $category[0]->slug ?>">  
+                                <a href="/<?php $category = get_the_category(); echo $category[0]->slug ?>">  
                                 <?php $category = get_the_category(); echo $category[0]->cat_name; ?></a>.
                         </span>
                     </p>
-                    <?php the_field('outro'); ?>   
+                     
                    
 				 </div>
             </div>

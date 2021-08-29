@@ -5,7 +5,7 @@
 			<section class="intro">
 				<div class="introcontainer">
 					<div class="introcolumn">
-					<h3 class="archive-title"><?php printf( '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+					<h3><?php printf(single_cat_title( '', false )); ?></h3>
 					<?php if ( category_description() ) : // Show an optional category description ?>
 						<p class="archive-meta"><?php echo category_description(); ?></p>
 					<?php endif; ?>
